@@ -8,6 +8,7 @@ import { OrdersModule } from './orders/orders.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { buffer } from 'stream/consumers';
+import { SocketGateway } from './socket.gateway';
 
 @Module({
   imports: [UsersModule,
@@ -28,6 +29,6 @@ import { buffer } from 'stream/consumers';
     })  
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService,SocketGateway],
 })
 export class AppModule {}

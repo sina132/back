@@ -16,6 +16,7 @@ const mongoose_1 = require("@nestjs/mongoose");
 const orders_module_1 = require("./orders/orders.module");
 const serve_static_1 = require("@nestjs/serve-static");
 const path_1 = require("path");
+const socket_gateway_1 = require("./socket.gateway");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -38,7 +39,7 @@ exports.AppModule = AppModule = __decorate([
                 rootPath: (0, path_1.join)(__dirname, "..", "/public"),
             })],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        providers: [app_service_1.AppService, socket_gateway_1.SocketGateway],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map
