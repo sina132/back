@@ -16,7 +16,6 @@ let SocketGateway = class SocketGateway {
     server;
     handleNewOrder() {
         this.server.emit("new");
-        console.log("emitted");
     }
 };
 exports.SocketGateway = SocketGateway;
