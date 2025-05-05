@@ -33,7 +33,7 @@ exports.SocketGateway = SocketGateway = __decorate([
     (0, websockets_1.WebSocketGateway)({
         cors: {
             origin: "*",
-            methodes: ["GET", "POST"],
+            methods: ["GET", "POST"],
             credentials: true
         },
         transports: ['websocket', 'polling'],
